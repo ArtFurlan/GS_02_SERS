@@ -92,7 +92,7 @@ A partir disso, são aplicadas regras como:
 
 # Código do Dispositivo IoT Simulado
 
-Arquivo: `src/simulacao_iot.py`
+Arquivo: `codigo/simulacao.py`
 
 ```python
 import pandas as pd
