@@ -155,7 +155,7 @@ Comportamentos esperados:
 hotel-energy-optimization/
 ├── data/
 │   └── consumo_hotel_mensal.csv
-├── codigo
+├── codigo/
 │   └── simulacao.py
 └── requirements.txt
 ```
