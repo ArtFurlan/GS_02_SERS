@@ -157,7 +157,6 @@ hotel-energy-optimization/
 │   └── consumo_hotel_mensal.csv
 ├── codigo
 │   └── simulacao.py
-├── README.md
 └── requirements.txt
 ```
 
