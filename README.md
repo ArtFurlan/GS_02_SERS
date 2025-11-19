@@ -155,10 +155,8 @@ Comportamentos esperados:
 hotel-energy-optimization/
 ├── data/
 │   └── consumo_hotel_mensal.csv
-├── src/
-│   └── simulacao_iot.py
-├── docs/
-│   └── arquitetura_iot.md
+├── codigo
+│   └── simulacao.py
 ├── README.md
 └── requirements.txt
 ```
@@ -171,7 +169,7 @@ hotel-energy-optimization/
 
 2. Rodar a simulação IoT:
    ```
-   python src/simulacao_iot.py
+   python codigo/simulacao.py
 
 A saída mostrará o comportamento automático do sistema conforme presença, ocupação e horário.
 
