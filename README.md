@@ -120,22 +120,22 @@ def avaliar_sistema(presenca: bool, quarto_ocupado: bool, horario: int, consumo_
     if not quarto_ocupado:
         ar_condicionado_ligado = False
         iluminacao_ligada = False
-        alertas.append("Quarto vazio → ar-condicionado e iluminação desligados.")
+        alertas.append("Quarto vazio: ar-condicionado e iluminação desligados.")
 
     elif quarto_ocupado and not presenca:
         ar_condicionado_ligado = True
         modo_eco = True
         iluminacao_ligada = False
-        alertas.append("Quarto ocupado sem presença → ar-condicionado em modo ECO, luz apagada.")
+        alertas.append("Quarto ocupado sem presença: ar-condicionado em modo ECO, luz apagada.")
 
     elif quarto_ocupado and presenca:
         ar_condicionado_ligado = True
         iluminacao_ligada = True
-        alertas.append("Presença detectada → conforto mantido (AC e iluminação ligados).")
+        alertas.append("Presença detectada: conforto mantido (AC e iluminação ligados).")
 
     if 0 <= horario <= 5:
         iluminacao_ligada = False
-        alertas.append("Horário de madrugada → iluminação reduzida/desligada por economia.")
+        alertas.append("Horário de madrugada: iluminação reduzida/desligada por economia.")
 
     if consumo_dia > limite_consumo:
         alertas.append(
@@ -155,12 +155,12 @@ presenca = False
 quarto_ocupado = True
 horario = 23
 
-print("=== Simulação IoT de Consumo de Energia ===")
+print(" Simulação IoT de Consumo de Energia")
 print(f"Consumo do dia (CSV): {consumo_dia} kWh")
 print(f"Horário atual: {horario}h")
 print(f"Quarto ocupado? {quarto_ocupado}")
 print(f"Presença detectada? {presenca}")
-print("-" * 60)
+print("--------------------------------------------------------------\n")
 
 resultado = avaliar_sistema(presenca, quarto_ocupado, horario, consumo_dia)
 
@@ -174,9 +174,9 @@ print("\nAlertas gerados:")
 
 if resultado["alertas"]:
     for alerta in resultado["alertas"]:
-        print(f"- {alerta}")
+        print(f"   {alerta}")
 else:
-    print("- Nenhum alerta gerado. Sistema operando normalmente.")
+    print("   Nenhum alerta gerado. Sistema operando normalmente.")
 ```
 # > Resultados Esperados
 
