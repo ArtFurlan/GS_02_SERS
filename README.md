@@ -97,7 +97,7 @@ Arquivo: `src/simulacao_iot.py`
 ```python
 import pandas as pd
 
-df = pd.read_csv('../data/consumo_hotel_mensal.csv')
+df = pd.read_csv('consumo_hotel_mensal.csv')
 
 # Simulação do sensor
 presenca = False
